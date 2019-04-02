@@ -1,16 +1,26 @@
-import React from 'react';
-import Home from './Home'
-import Calculators from './Calculators'
+import React from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
+import Home from '.Views/Home'
+import Calculators from '.Views/Calculators'
 
 const App = () => {
   return (
-    <div>
-      <Home />
-      <Calculators />
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/calculators">Calculators</Link>
+          </li>
+        </ul>
+      </div>
 
-    </div>
+      <Route exact={true} path={"/"} component={Home} />
+      <Route path={"/calculators"} component={Calculators} />
+    </Router>
   )
 }
 
