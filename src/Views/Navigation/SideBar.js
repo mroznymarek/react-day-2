@@ -3,14 +3,14 @@ import Drawer from '@material-ui/core/Drawer'
 
 const styles = {
     drawer: {
-        width: 200
+        width: 100
     }
 }
 
 const SideBar = (props) => (
     <div>
         <Drawer 
-            open={true}
+            open={false}
             onClose={() => console.log ('TOGGLE')}
         >
             <div style={styles.drawer}>

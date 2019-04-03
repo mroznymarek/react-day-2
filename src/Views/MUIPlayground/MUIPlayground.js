@@ -1,23 +1,20 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import Paper from '@material-ui/core/Paper'
+import PaperRefined from '../../Components/PaperRefined'
 
 const MUIPlayground = (props) => (
     <div>
-        <Paper
-            style={{
-                margin: '20px',
-                padding: '20px',
-            }}
+        <PaperRefined
+            doNotDisplayChildren={true}
         >
-            <Button
+                <Button
                 variant={'contained'}
                 color={'primary'}
                 onClick={() => alert('Klik!')}
             >
                 Kliknij
             </Button>
-        </Paper>
+            </PaperRefined>
     </div>
 )
 
